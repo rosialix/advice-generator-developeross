@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Varta:wght@700&display=swap");
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --light_cyan: hsl(193, 38%, 86%);
+  --neon_green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+
+  --grayish_blue: hsl(217, 19%, 38%);
+  --dark_grayish_blue: hsl(217, 19%, 24%);
+  --dark_blue: hsl(218, 23%, 16%);
+
+  /* Typography */
+  --size: 14px;
+  --font-family: "Varta", sans-serif;
+
+  font-size: 52%;
+}
+body {
+  background: var(--dark_blue);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  height: 100vh;
+  display: grid;
+  /* place-items: center; */
+  justify-content: center;
+  align-content: center;
+}
+.advice-generator{
+ width: 100%;
+ max-width: 54rem;
+ display: grid;
+ grid: max-content 3.2rem/1fr;
+}
+.advice-generator__output {
+  background: var(--dark_grayish_blue);
+  padding: 4rem 2.4rem 6.4rem;
+  margin: auto 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.advice-generator__number {
+  color: var(--neon_green);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.345rem;
+}
+
+.advice-generator__quote {
+  color: var(--light_cyan);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: -0.025rem;
+
+}
+
+.advice-generator__divisor{
+   display: flex;
+   width: 100%;
+}
+picture > img {
+  margin: 0;
+  width: 100%;
+}
+
+.advice-generator__btn{
+  background: var(--neon_green);
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  border: 0;
+  grid-row: 2/3;
+  grid-column: 1/2; 
+  place-self: end center;
+  transition: box-shadow 250ms;
+  cursor: pointer;
+}
+
+.advice-generator__btn:is(:hover){
+  box-shadow: 0px 0px 20px var(--neon_green);
+}
+.advice-generator__btn-img{
+  transition: transform 250ms ;
+}
+
+.advice-generator__btn:is(:hover) > img{
+  transform:rotate(138deg);
+}
+
+@media screen and (min-width:545px){
+  .advice-generator__number {
+    letter-spacing: 0.485rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .advice-generator__quote{
+    margin-bottom: 1.6rem;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--light_cyan);
+  margin-top: 5rem;
+}
+.attribution a {
+  color: var(--neon_green);
+}
